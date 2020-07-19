@@ -1,0 +1,53 @@
+﻿@model IEnumerable<YourCommunityWorkshop.ViewModels.CustomerRentalsViewModel>
+
+@{
+    ViewBag.Title = "ReturnToolView";
+}
+
+<h2>Tools to be Returned</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReturn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReturn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToolName)
+        </td>
+        <td>
+            @*@Html.ActionLink("Go To Check In", "CheckInToolView", new { id = item.RentalId })*@
+            <a href="@Url.Action("CheckInToolView", "Rentals", new {id = item.RentalId})" class="btn btn-default"><i class="fas fa-exchange-alt"></i> Go To Check In</a>
+        </td>
+    </tr>
+}
+
+</table>

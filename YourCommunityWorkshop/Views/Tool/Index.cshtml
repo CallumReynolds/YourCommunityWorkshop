@@ -1,0 +1,75 @@
+﻿@model IEnumerable<YourCommunityWorkshop.Models.Tool>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="@Url.Action("Create", "Tool")" class="btn btn-default"><i class="fa fa-plus"></i> Create New</a>
+    <a href="@Url.Action("Report", "Tool")" class="btn btn-default"><i class="far fa-file-excel"></i> Reports</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Availability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolCondition)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Availability)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToolCondition)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", "Tool", new {id = item.ToolId})" class="btn btn-default"><i class="fa fa-edit"></i> Edit</a>
+                <a href="@Url.Action("Details", "Tool", new {id = item.ToolId})" class="btn btn-default"><i class="fa fa-info"></i> Details</a>
+                <a href="@Url.Action("Delete", "Tool", new {id = item.ToolId})" class="btn btn-default"><i class="fa fa-trash"></i> Delete</a>
+                <a href="@Url.Action("ToolHistory", "Tool", new { id = item.ToolId })" class="btn btn-default"><i class="fa fa-history"></i> History</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section scripts
+{
+    <script>
+        $(function() {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+    </script>
+}
+
+@*<p>
+        @Html.ActionLink("Help", "ToolsHelp", "Home")
+    </p>*@

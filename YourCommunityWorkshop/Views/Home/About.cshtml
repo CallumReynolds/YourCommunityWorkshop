@@ -1,7 +1,21 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div>
+    <p>
+        Community Workshop is a newly built application for YourProject to help with keeping track of tools. <br />
+        Below is a bunch of information that will help you navigate and use Community Workshop: <br />
+        Community Workshop allows the tracking of:
+    </p>
+    <ul>
+        <li><a href="@Url.Action("ToolsHelp")">Tools</a></li>
+        <li><a href="@Url.Action("CustomersHelp")">Customers</a></li>
+        <li><a href="@Url.Action("RentalsHelp")">Rentals</a></li>
+    </ul>
+    <p>Click on one of the above items to get more information!</p>
+</div>
+
+

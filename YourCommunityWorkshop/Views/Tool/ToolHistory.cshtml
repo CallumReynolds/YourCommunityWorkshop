@@ -1,0 +1,54 @@
+﻿@model IEnumerable<YourCommunityWorkshop.ViewModels.ToolRentalDetailsViewModel>
+
+@{
+    ViewBag.Title = "ToolHistory";
+}
+
+<h2>
+    Tool History for Tool Id: @Html.DisplayName(Model.Select(ti => ti.ToolId.ToString()).FirstOrDefault())
+     Tool Name: @Html.DisplayName(Model.Select(tn => tn.ToolName).FirstOrDefault())
+</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReturn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReturn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index") | <br />
+
+    @using (Html.BeginForm("ExportToolHistory", "Tool", new { Id = Model.Select(t => t.ToolId).FirstOrDefault() }, FormMethod.Post))
+    {
+        <button class="btn btn-default"><i class="fa fa-file-excel"></i> Export</button>
+    }
+</div>

@@ -15,15 +15,30 @@ namespace YourCommunityWorkshop.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Community Workshop Information and Help Page";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "YourProject Contact Page.";
 
+            return View();
+        }
+
+        public ActionResult ToolsHelp()
+        {
+            return View();
+        }
+
+        public ActionResult CustomersHelp()
+        {
+            return View();
+        }
+
+        public ActionResult RentalsHelp()
+        {
             return View();
         }
     }

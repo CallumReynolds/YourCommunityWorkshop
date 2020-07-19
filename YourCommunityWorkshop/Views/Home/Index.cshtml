@@ -3,29 +3,76 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>YourProject</h1> <canvas class="rotated" id="myCanvas" width="300" height="200"></canvas>
+    <p class="lead">
+        Community Workshop is a volunteer run organisation which provides workspaces and tools for the general public to use.
+        Anyone that would like to use these workspaces is required to complete a general safety course (facilitated by YourProject).
+        Use of heavier machinery may require additional training.
+    </p>
+    <p><a href="@Url.Action("About")" class="btn btn-primary btn-lg">Learn More &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Tools</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            List of all the tools in Community Workshop with details about each tool.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Tool")">Tools Page &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Customers</h2>
+        <p>
+            List of all the customers that can hire tools.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Customer")">Customers Page &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Rentals</h2>
+        <p>
+            List of all the rentals for the workshop with options to hire and return tools.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Rentals")">Rentals Page &raquo;</a></p>
     </div>
 </div>
+
+<script type="text/javascript">
+        window.onload = function () {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            // draw stuff here
+            context.moveTo(140, 120);
+            context.lineTo(140, 30);
+            context.stroke()
+            context.moveTo(160, 120);
+            context.lineTo(160, 30);
+            context.stroke()
+            context.moveTo(140, 120);
+            context.lineTo(160, 120);
+            context.stroke()
+            context.moveTo(130, 30);
+            context.lineTo(190, 30);
+            context.stroke()
+            context.moveTo(130, 30);
+            context.lineTo(120, 40);
+            context.stroke()
+            context.moveTo(120, 40);
+            context.lineTo(115, 40);
+            context.stroke()
+            context.moveTo(115, 40);
+            context.lineTo(115, 0);
+            context.stroke()
+            context.moveTo(115, 0);
+            context.lineTo(120, 0);
+            context.stroke()
+            context.moveTo(120, 0);
+            context.lineTo(130, 10);
+            context.stroke()
+            context.moveTo(130, 10);
+            context.lineTo(170, 10);
+            context.stroke()
+            context.moveTo(170, 10);
+            context.lineTo(190, 30);
+            context.stroke()
+        };
+</script>

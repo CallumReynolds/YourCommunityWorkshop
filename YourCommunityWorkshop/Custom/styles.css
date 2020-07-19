@@ -1,0 +1,13 @@
+﻿body {
+    background-color: ghostwhite;
+}
+
+#myCanvas {
+    position: absolute;
+    left: 680px;
+    top: 70px;
+}
+
+.rotated {
+    transform: rotate(345deg);
+}

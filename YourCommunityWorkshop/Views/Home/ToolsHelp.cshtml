@@ -1,0 +1,167 @@
+﻿
+@{
+    ViewBag.Title = "ToolsHelp";
+}
+
+<h2>Tool Related Help Page</h2>
+<h3>Information about Tools</h3>
+
+<div>
+    <p>
+        Community Workshop provides useful information about the tools along with the creation, editing and deleting of tools.
+    </p>
+    <br />
+    <h4>Here's a list of FAQ and Help for Tools.</h4>   
+</div>
+
+<div id="accordion">
+    <!--Creating A Tool-->
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h4 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How do I create a tool?
+                </button>
+            </h4>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <p>Creating a tool is easy. All you have to do is go to the Tools page, click on Create New.</p>
+                <img src="~/Images/CreateATool.png" alt="Click on Create New image" />
+                <br />
+                <br />
+                <p>Enter the details about the tool and then click Create.</p>
+                <img src="~/Images/CreateAToolDetails.png" alt="Enter tool details image" />
+                <br />
+                <br />
+                <p>Voilà! You just created a new tool!</p>
+                <img src="~/Images/CreateAToolResult.png" alt="Newly created tool image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Editing A Tool-->
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How do I edit a tool?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure you are on the main Tool page, then click on Edit.</p>
+                <img src="~/Images/EditAToolButton.png" alt="Click on Edit image" />
+                <br />
+                <br />
+                <p>Once you are on the Edit page, make the changes you require, then click on Save.</p>
+                <img src="~/Images/EditAToolDetail.png" alt="Editing a tool detail image" />
+                <br />
+                <br />
+                <p>Ta-da! And thats how you edit a tool!</p>
+                <img src="~/Images/EditAToolResult.png" alt="Edited tool results image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Tool Details-->
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How do I look at the details of a tool?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Tool page, then click on the details option.</p>
+                <img src="~/Images/DetailsOfTool.png" alt="Tool details click image" />
+                <br />
+                <br />
+                <p>On this screen you can view the Tool details and also click on Edit to change some details or go back to the list.</p>
+                <img src="~/Images/DetailsOfToolView.png" alt="Tool details view image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Delete A Tool-->
+    <div class="card">
+        <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I delete a tool?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Tool page, then click on the delete option.</p>
+                <img src="~/Images/DeleteATool.png" alt="Tool delete click image" />
+                <br />
+                <br />
+                <p>
+                    On this screen you will prompted to delete a tool, clicking on delete will remove the tool from the list. <br />
+                    (Warning: Be careful when deleting, you can't get the tool back once you delete it!)
+                </p>
+                <img src="~/Images/DeleteAToolView.png" alt="Tool deletion view image" />
+                <br />
+                <br />
+                <p>You will be brought back to the main tool page and should notice that the deleted tool is no longer there.</p>
+                <img src="~/Images/DeleteAToolResult.png" alt="Tool deletion result image" />
+            </div>
+        </div>
+    </div>
+
+    <!--History Of Tool-->
+    <div class="card">
+        <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How do I look at the history for a tool?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Tool page, then click on the history option.</p>
+                <img src="~/Images/HistoryOfTool.png" alt="Tool history click image" />
+                <br />
+                <br />
+                <p>On this screen you will see the history of the selected tool.</p>
+                <img src="~/Images/HistoryOfToolView.png" alt="Tool history view image" />
+                <br />
+                <br />
+                <p>You can choose to Export the tool history to a csv file by clicking on the Export button.</p>
+                <img src="~/Images/ExportHistoryOfTool.png" alt="Export tool history image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Reports Of Tool-->
+    <div class="card">
+        <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    How do I look at reports for tools?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Tool page, then click on the reports option.</p>
+                <img src="~/Images/ReportsForTools.png" alt="Tool reports click image" />
+                <br />
+                <br />
+                <p>On this screen you will see a list of reports that can be generated, clicking on one will take you to the report.</p>
+                <img src="~/Images/ReportsForToolsView.png" alt="Tool reports view image" />
+                <br />
+                <br />
+                <p>You can choose to Export the selected report to a csv by clicking on the Export button.</p>
+                <img src="~/Images/ReportsForToolResult.png" alt="Report result image" />
+            </div>
+        </div>
+    </div>
+</div>

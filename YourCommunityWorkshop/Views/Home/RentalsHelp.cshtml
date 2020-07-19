@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "RentalsHelp";
+}
+
+<h2>Rental Related Help Page</h2>
+<h3>Information about Rentals</h3>
+
+<div>
+    <p>
+        Community Workshop provides useful information about rentals along with the hiring and returning of tools.
+    </p>
+    <br />
+    <h4>Here's a list of FAQ and Help for Rentals.</h4>
+</div>
+
+<div id="accordion">
+    <!--Creating A Rental-->
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h4 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How do I hire a tool?
+                </button>
+            </h4>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <p>Hiring a tool is easy. All you have to do is go to the Rentals page, click on Create New.</p>
+                <img src="~/Images/Rental/HireClick.png" alt="Click on Create New image" />
+                <br />
+                <br />
+                <p>Enter the details about the customer and date rented then click Create.</p>
+                <img src="~/Images/Rental/HireCreate.png" alt="Enter rental details image" />
+                <br />
+                <br />
+                <p>
+                    Once you've created a rental, you'll be sent to a page to add a tool to the rental. <br />
+                    Click on add tools to add a tool to the rental.
+                </p>
+                <img src="~/Images/Rental/HireAddTool.png" alt="Add tool to rental image" />
+                <br />
+                <br />
+                <p>You'll have a dropdown list of tools to choose from. (Only tools that are active and available can be hired.)</p>
+                <img src="~/Images/Rental/HireAddToolView.png" alt="Choose rental tool image" />
+                <br />
+                <br />
+                <p>After adding the tool, all that needs to be done is click on save.</p>
+                <img src="~/Images/Rental/HireAddToolResult.png" alt="Create rental image" />
+                <br />
+                <br />
+                <p>You should now have a newly created rental!</p>
+                <img src="~/Images/Rental/HireToolResult.png" alt="Create rental result image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Editing A Rental-->
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How do I edit a rental?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure you are on the main Rental page, then click on Edit.</p>
+                <img src="~/Images/Rental/EditClick.png" alt="Click on Edit image" />
+                <br />
+                <br />
+                <p>
+                    Once you are on the Edit page, make the changes you require, then click on Save. <br />
+                    (You can also make Edits to the tool.)
+                </p>
+                <img src="~/Images/Rental/EditView.png" alt="Editing a rental image" />
+                <br />
+                <br />
+                <p>You'll be brought back to the rentals page with your changes to the rental.</p>
+                <img src="~/Images/Rental/EditResult.png" alt="Edited rental results image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Rental Details-->
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How do I look at the details of a rental?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Rental page, then click on the details option.</p>
+                <img src="~/Images/Rental/DetailClick.png" alt="Rental details click image" />
+                <br />
+                <br />
+                <p>On this screen you can view the rental details and also click on Edit to change some details or go back to the list.</p>
+                <img src="~/Images/Rental/DetailResult.png" alt="Rental details view image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Delete A Rental-->
+    <div class="card">
+        <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How do I delete a rental?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Rental page, then click on the delete option.</p>
+                <img src="~/Images/Rental/DeleteClick.png" alt="Rental delete click image" />
+                <br />
+                <br />
+                <p>
+                    On this screen you will prompted to delete a rental, clicking on delete will remove the rental from the list. <br />
+                    (Warning: Be careful when deleting, you can't get the rental information back once you delete it!)
+                </p>
+                <img src="~/Images/Rental/DeleteView.png" alt="Rental deletion view image" />
+                <br />
+                <br />
+                <p>You will be brought back to the main rental page and should notice that the deleted rental is no longer there.</p>
+                <img src="~/Images/Rental/DeleteResult.png" alt="Rental deletion result image" />
+            </div>
+        </div>
+    </div>
+
+    <!--Return Tool-->
+    <div class="card">
+        <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How do I return a tool?
+                </button>
+            </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+                <p>Make sure to be on the main Rental page, then click on the Tools Awaiting Return option.</p>
+                <img src="~/Images/Rental/ReturnClick.png" alt="Return tool click image" />
+                <br />
+                <br />
+                <p>
+                    On this screen you will see the tools that are currently hired and awaiting to be returned.
+                    Click on the Go to Check In option to proceed to checking in a tool.
+                </p>
+                <img src="~/Images/Rental/ReturnView.png" alt="Return view image" />
+                <br />
+                <br />
+                <p>Finally click on the Check In button to return the tool.</p>
+                <img src="~/Images/Rental/ReturnDetail.png" alt="Return details image" />
+                <br />
+                <br />
+                <p>
+                    You'll be brought back to the Rental page with the tool now returned.
+                    The date returned will be the current time of check in and the tool will be available for hiring again.
+                </p>
+                <img src="~/Images/Rental/ReturnResult.png" alt="Return result image" />
+            </div>
+        </div>
+    </div>
+</div>

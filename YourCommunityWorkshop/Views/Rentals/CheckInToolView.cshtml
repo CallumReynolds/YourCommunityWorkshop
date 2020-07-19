@@ -1,0 +1,61 @@
+﻿@model YourCommunityWorkshop.ViewModels.CustomerRentalsViewModel
+
+@{
+    ViewBag.Title = "CheckInToolView";
+}
+
+<h2>Details of Check In</h2>
+
+<div>
+    <h4>CustomerRentalsViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRented)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRented)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.DateReturn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReturn)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToolName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @using (Html.BeginForm("CheckInToolView", "Rentals", new { Id = Model.RentalId }, FormMethod.Post))
+    {
+        <button class="btn btn-default"><i class="fa fa-check"></i> Check In</button>
+    }
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<YourCommunityWorkshop.Models.Tool>
+
+@{
+    ViewBag.Title = "ReportActiveTools";
+}
+
+<h2>ReportActiveTools</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Availability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToolCondition)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Availability)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToolCondition)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to Reports", "Report") | @Html.ActionLink("Back to List", "Index") <br />
+
+    @using (Html.BeginForm("ExportActiveTools", "Tool", FormMethod.Post))
+    {
+        <button class="btn btn-default"><i class="fa fa-file-excel"></i> Export</button>
+    }
+</div>
+
